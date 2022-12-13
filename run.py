@@ -57,3 +57,14 @@ def player_ship_location(sea):
             print("Not an integer, please try again")
 
     return sea
+
+
+def random_row(sea):
+    return randint(0, len(sea) - 1)
+
+
+def random_col(sea):
+    return randint(0, len(sea[0]) - 1)
+
+    
+        
