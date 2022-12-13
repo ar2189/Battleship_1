@@ -66,5 +66,13 @@ def random_row(sea):
 def random_col(sea):
     return randint(0, len(sea[0]) - 1)
 
-    
-        
+
+def find_enemy_ship(sea):
+    valid_enemy_ship_location = False
+    while(valid_enemy_ship_location == False):
+        enemy_ship_row = random_row(sea)
+        enemy_ship_col = random_col(sea)
+        # Prevents computer to choose your ship coordiantes
+        if (sea[enemy_ship_row][enemy_ship_col] != "#"):
+            valid_enemy_ship_location = True
+    return enemy_ship_row, enemy_ship_col
