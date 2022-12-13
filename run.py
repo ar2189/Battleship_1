@@ -123,3 +123,64 @@ def col_guess(sea):
             print("Not an integer, please try again")
     
     return guess_col - 1
+
+
+def enemy_turn(sea, enemy_guess_count, enemy_ship_row, enemy_ship_col):
+    """
+    Function that has the logic for the computer to choose random valid coordinates to attack.
+    """
+    valid_enemy_attack = False
+    while (valid_enemy_attack == False):
+        attack_row = random_row(sea)
+        attack_col = random_col(sea)
+        # Enemy hit your ship
+        if (sea[attack_row][attack_col] == "#"):
+            print("\nEnemy sunk your battleship! You lose!")
+            print("The enemy sunk your battleship in {} tries\n".format(enemy_guess_count))
+            valid_enemy_attack = True
+            return True
+        # Prevents AI from choosing already entered coordinate
+        elif (sea[attack_row][attack_col] != "O"):
+            continue
+        # Prevents AI from choosing their ships coordinates
+        elif (attack_row == enemy_ship_row and attack_col == enemy_ship_col):
+            continue
+        # Prints the enemy attack if missed
+        else:
+            sea[attack_row][attack_col] = "*"
+            print("ENEMY MOVE")
+            print_sea(sea)
+            valid_enemy_attack = True
+    return False
+
+
+def player_turn(sea, valid_guess_count, enemy_ship_row, enemy_ship_col):
+    """
+    Function for the player to choose coordintes where player wants to attack.
+    """
+    valid_player_turn = False
+    while (valid_player_turn == False):
+        guess_row = row_guess(sea)
+        guess_col = col_guess(sea)
+
+        # Already played coordinates
+        if (sea[guess_row][guess_col] == "X" or sea[guess_row][guess_col] == "*"):
+            print("Coordinates already entered, Try again")
+        # Player entered their ship coordinates
+        elif (sea[guess_row][guess_col] == "#"):
+            print("Don't blow yourself up now... Try again")
+        # Prints the player attack if missed
+        elif (guess_row != enemy_ship_row or guess_col != enemy_ship_col):
+            sea[guess_row][guess_col] = "X"
+            print("\nPLAYER MOVE")
+            print_sea(sea)
+            print("You missed the battleship!\n")
+            valid_player_turn = True
+        # player hit enemy ship
+        else:
+            print("\nYou sunk the battleship! You win!")
+            print(
+                "It took {} valid tries to win\n".format(valid_guess_count))
+            return True
+    
+    return False
