@@ -76,3 +76,50 @@ def find_enemy_ship(sea):
         if (sea[enemy_ship_row][enemy_ship_col] != "#"):
             valid_enemy_ship_location = True
     return enemy_ship_row, enemy_ship_col
+
+
+def print_sea(sea):
+    """
+    Function to print the board.
+    """
+    for row in sea:
+        print(("   ").join(row))
+    print(" ")
+
+
+def row_guess(sea):
+    """
+    Function for player to choose a row where he wants to hit.
+    """
+    valid_row = False
+    print(("Enter attack coordinates.\nPlease enter number from 1 - {}").format(len(sea)))
+    while (valid_row == False):
+        try:
+            guess_row = int(input("Guess Row"))
+            if (guess_row not in range(1, len(sea) + 1)):
+                print(("Not a valid row, please enter from 1 - {}").format(len(sea)))
+            else:
+                valid_row = True
+        except ValueError:
+            print("Not an integer, plaese try again.")
+    
+    return guess_row - 1
+
+
+def col_guess(sea):
+    """
+    Function for palyer to choose a column where he wants to hit.
+    """
+    valid_col = False
+    while(valid_col == False):
+        try:
+            guess_col = int(input("Guess Column: "))
+            if (guess_col not in range(1, len(sea)+1)):
+                print(
+                    ("Not a valid row, please enter number from 1 - {}: ").format(len(sea)))
+            else:
+                valid_col = True
+        except ValueError:
+            print("Not an integer, please try again")
+    
+    return guess_col - 1
