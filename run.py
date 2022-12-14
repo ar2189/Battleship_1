@@ -184,3 +184,24 @@ def player_turn(sea, valid_guess_count, enemy_ship_row, enemy_ship_col):
             return True
     
     return False
+
+
+def play_again():
+    """
+    Function to ask player if they would like to play again
+    """
+    print("Choose an option:\n1 - yes\n2 - no")
+    while(True):
+        try:
+            answer = int(
+                input("Play again? "))
+            if(answer == 1):
+                main()
+                return False  # if played again, this stops the recursive call asking to play again
+            elif (answer == 2):
+                print("Thanks for playing!")
+                return False
+            else:
+                print("Not a valid choice, choose 1 or 2.")
+        except ValueError:
+            print("Not an integer, please try again")
