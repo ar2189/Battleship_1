@@ -205,3 +205,27 @@ def play_again():
                 print("Not a valid choice, choose 1 or 2.")
         except ValueError:
             print("Not an integer, please try again")
+
+
+
+def play_battleship(sea, enemy_ship_row, enemy_ship_col):
+    """
+    Function that keeps track of the player and computer turns.
+    Also shows how many moves it took for player or computer ti win/lose.
+    """
+    valid_guess_count = 1
+    enemy_guess_count = 1
+    enemy_sunk = False
+    player_sunk = False
+    while (enemy_sunk == False and player_sunk == False):
+        enemy_sunk = player_turn(sea, valid_guess_count, enemy_ship_row, enemy_ship_col)
+        valid_guess_count += 1
+        if enemy_sunk == True:
+            break
+        player_sunk = enemy_turn(sea, enemy_guess_count, enemy_ship_row, enemy_ship_col)
+        enemy_guess_count += 1
+        if player_sunk == True:
+            break
+
+
+
