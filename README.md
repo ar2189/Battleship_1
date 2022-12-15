@@ -12,4 +12,10 @@ The user and computer place their ship on the board and both have to eliminate t
 After that the player places one ship on the board. The computer does the same and chooses to place a ship in a random position.
 The player ship location is marked by a # while the computer ship is hidden from the player. Player missed attacks are marked by an X and computer missed
 attacks are marked by a *. When either sinks the enemy battleship a message occurs who hit and tells the player if the player won or lost.</p>
+<br><br>
+
+<h2>Features</h2>
+<br>
+<h3>Existing features</h3>
+<ul>Random board generated</ul>
 
