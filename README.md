@@ -8,6 +8,5 @@ The user and computer place their ship on the board and both have to eliminate t
 
 <h2>How to play</h2>
 <br>
-<p>Battleship is based on the classic pen-and-paper game.<br>
-In this version the player decides the size of the board.</p>
+<p>Battleship is based on the classic pen-and-paper game. In this version the player decides the size of the board.</p>
 
