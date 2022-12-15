@@ -17,5 +17,9 @@ attacks are marked by a *. When either sinks the enemy battleship a message occu
 <h2>Features</h2>
 <br>
 <h3>Existing features</h3>
-<ul>Random board generated</ul>
+<ul>Adjust the size of the board
+  <li>The player is asked to adjust the board size between 2 and 10.</li>
+  <li>This feature also lets the player choose how long the might last. If it is a small board then it wont take long.
+  if it is a large board, it might take a while to finish the game.</li>
+</ul>
 
