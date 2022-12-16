@@ -37,3 +37,44 @@ attacks are marked by a *. When either sinks the enemy battleship a message occu
   <li>Have ships larger than 1x1.</li>
 </ul>
 
+<br>
+<h2>Data Model</h2>
+<br>
+<p>I decided to use the place holder method as my model. The game gives the player to choose the size of the board the player wishes to.
+Inside that board both player and computer decide where they would wish to place the battleship, with the latter choosing a position randomly but not coinside with the player position.
+As you go further in the code you will see the code written for the player to guess a row and column and for the computer to choose one randomely.
+It also shows when a player or computer wins, how many moves it took for the game to end.
+The code also shows if the player wishes to play again.</p>
+
+<br>
+<h2>Testing</h2>
+<ul>
+  <li>Passed the code through a PEP8 linter and confirmed there are no errors.</li>
+  <li>Tested in my local GitHub terminal and the Code Institute Heroku terminal.</li>
+</ul>
+
+<br>
+<h2>Bugs</h2>
+<ul>
+  <li>Before writing the code I practised to write the code on Replit where it was more time efficient.</li>
+  <li>I had trouble during the first step where it shows me to decide the size of the board, but gave an error when I inputed an integer
+    The problem was that I hadn't structured the <action>if</action> statement properly.</li>
+  <li>After the game ends, it showed an error when deciding to restart the game. The play_again() statement was missing in the def main().</li>
+</ul>
+
+<h2>Deployment</h2>
+<ul>
+  <li>Fork or clone this repository.</li>
+  <li>Create a new Heroku app.</li>
+  <li>Set the buildbacks to Python and NideJS in that order.</li>
+  <li>Link the Heroku app to the repository.</li>
+  <li>Click on <action>Deploy</action>.</li>
+</ul>
+
+<br>
+<h2>Credits</h2>
+<ul>
+  <li>Code Institute for deployment terminal.</li>
+  <li>Kowledge Mavens(Youtube Channel)</li>
+  <li>Pythondex.com</li>
+</ul>
