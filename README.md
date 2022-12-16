@@ -31,7 +31,7 @@ attacks are marked by a *. When either sinks the enemy battleship a message occu
 </ul>
 
 <br>
-<h2>Future Features</h2>
+<h3>Future Features</h3>
 <ul>
   <li>Allow player to place more than one ship.</li>
   <li>Have ships larger than 1x1.</li>
