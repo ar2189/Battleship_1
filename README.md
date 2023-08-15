@@ -19,7 +19,9 @@ attacks are marked by a *. When either sinks the enemy battleship a message occu
 <h3>Existing features</h3>
 <ul>Adjust the size of the board
   <li>The player is asked to adjust the board size between 2 and 10.</li>
+  
   ![Screenshot 2022-12-17 11 05 47](https://user-images.githubusercontent.com/112749480/208236725-1e2eb7d9-2416-4e1e-a387-20135836536d.png)
+  
   <li>This feature also lets the player choose how long the might last. If it is a small board then it wont take long.
   if it is a large board, it might take a while to finish the game.</li>
   <li>Once the size of the board is decided, the player sets the ship inside the adjusted board. The computer does the same.</li>
