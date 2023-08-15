@@ -25,14 +25,18 @@ attacks are marked by a *. When either sinks the enemy battleship a message occu
   <li>This feature also lets the player choose how long the might last. If it is a small board then it wont take long.
   if it is a large board, it might take a while to finish the game.</li>
   <li>Once the size of the board is decided, the player sets the ship inside the adjusted board. The computer does the same.</li>
+  
   ![Screenshot 2022-12-17 11 06 18](https://user-images.githubusercontent.com/112749480/208236750-107e30cd-cd2f-4298-8c89-1fb7f5d7c71a.png)
+  
   <li>After that the game describes the signs for the player ship(#), player missed hits(X) and computer missed hits(*)</li>
   <li>Player is then asked to guess a row and a column where player wants to attack.</li>
   <li>Player can only enter integers. If not then the games asks player to try again until the correct row and column are inputed.</li>
   <li>The game continues until one of the players hits the enemy ship.</li>
   <li>When either the player or computer ship has sunk does the game end. The game then tells how many moves it took for one side to win.</li>
   <li>When the game ends it asks if the player wants to play again.</li>
+  
   ![Screenshot 2022-12-17 11 07 16](https://user-images.githubusercontent.com/112749480/208236845-42ee0210-503c-4b8c-869d-4a9b563e25d4.png)
+  
 </ul>
 
 <br>
